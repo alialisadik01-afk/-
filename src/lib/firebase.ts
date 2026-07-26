@@ -19,16 +19,14 @@ export const db = initializeFirestore(app, {
   experimentalAutoDetectLongPolling: true,
 }, "ai-studio-howarimarket-cbfde68e-04be-4d71-adac-b96429928a6c");
 
-async function testConnection() {
+// Non-blocking connection check
+setTimeout(async () => {
   try {
-    await getDocFromServer(doc(db, 'test', 'connection'));
-  } catch (error) {
-    if (error instanceof Error && (error.message.includes('the client is offline') || error.message.includes('unavailable'))) {
-      console.warn("Firebase connection note: Operating in offline/fallback mode.");
-    }
+    await getDoc(doc(db, 'test', 'connection'));
+  } catch {
+    // Silent catch for initial connection test
   }
-}
-testConnection();
+}, 2000);
 
 // Initialize Auth
 export const auth = getAuth(app);
