@@ -1,0 +1,65 @@
+{
+  "firestore": {
+    "collections": {
+      "users": {
+        "description": "Store authenticated user profile data",
+        "schema": {
+          "uid": "string",
+          "displayName": "string",
+          "email": "string",
+          "photoURL": "string",
+          "createdAt": "timestamp"
+        }
+      },
+      "orders": {
+        "description": "Store guest and authenticated user orders",
+        "schema": {
+          "id": "string",
+          "fullName": "string",
+          "phone": "string",
+          "city": "string",
+          "address": "string",
+          "notes": "string",
+          "paymentMethod": "string",
+          "items": "array",
+          "total": "number",
+          "createdAt": "timestamp",
+          "userId": "string|null",
+          "isGuest": "boolean",
+          "status": "string"
+        }
+      },
+      "products": {
+        "description": "Store marketplace products",
+        "schema": {
+          "id": "string",
+          "name": "object",
+          "tagline": "object",
+          "description": "object",
+          "price": "number",
+          "originalPrice": "number",
+          "discount": "number",
+          "rating": "number",
+          "reviewsCount": "number",
+          "image": "string",
+          "images": "array",
+          "colors": "array",
+          "specs": "object",
+          "benefits": "object",
+          "ingredients": "object",
+          "themeColor": "string",
+          "accentColor": "string",
+          "textColor": "string"
+        }
+      },
+      "wishlists": {
+        "description": "Store user wishlists",
+        "schema": {
+          "userId": "string",
+          "productIds": "array",
+          "updatedAt": "timestamp"
+        }
+      }
+    }
+  }
+}
