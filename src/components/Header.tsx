@@ -215,6 +215,49 @@ export default function Header({
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        {/* Top Ticker Notification Banner */}
+        <div className="bg-gradient-to-r from-emerald-950 via-emerald-800 to-teal-900 text-white text-[11px] sm:text-xs py-2 border-b border-emerald-700/40 shadow-inner overflow-hidden select-none">
+          {/* Mobile view: Continuous Marquee Animation */}
+          <div className="block sm:hidden relative w-full overflow-hidden">
+            <motion.div
+              className="flex items-center gap-4 whitespace-nowrap w-max"
+              animate={{
+                x: language === 'ar' ? ['0%', '50%'] : ['0%', '-50%']
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 20,
+                ease: 'linear'
+              }}
+            >
+              {[1, 2, 3, 4].map((index) => (
+                <div key={index} className="flex items-center gap-2 px-2">
+                  <span className="bg-amber-400 text-emerald-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider flex-shrink-0 shadow-2xs">
+                    {language === 'fr' ? 'LIVRAISON' : 'عرض الشحن'}
+                  </span>
+                  <span className="font-bold">
+                    {language === 'fr'
+                      ? '🚚 LIVRAISON 100% GRATUITE sur le Pack Complet (249 MAD) • Produits individuels: +35 MAD'
+                      : '🚚 توصيل مجاني 100% لجميع المدن عند طلب الباك الكامل (249 درهم) • المنتجات الفردية: +35 درهم توصيل'}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Desktop view: Centered layout */}
+          <div className="hidden sm:flex items-center justify-center gap-2 px-3 font-bold">
+            <span className="bg-amber-400 text-emerald-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse flex-shrink-0">
+              {language === 'fr' ? 'LIVRAISON' : 'عرض الشحن'}
+            </span>
+            <span>
+              {language === 'fr'
+                ? '🚚 LIVRAISON 100% GRATUITE sur le Pack Complet (249 MAD) | Produits individuels: +35 MAD livraison'
+                : '🚚 توصيل مجاني 100% لجميع المدن عند طلب الباك الكامل (249 درهم) | المنتجات الفردية: +35 درهم توصيل'}
+            </span>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             
