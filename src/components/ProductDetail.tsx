@@ -263,6 +263,8 @@ export default function ProductDetail({
                   transition={{ duration: 0.3 }}
                   src={activeImage}
                   alt={product.name[language]}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center relative z-10 hover:scale-105 transition-transform duration-500 rounded-3xl"
                   referrerPolicy="no-referrer"
                 />
@@ -312,6 +314,8 @@ export default function ProductDetail({
                       <img
                         src={img}
                         alt={`thumbnail-${idx}`}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />

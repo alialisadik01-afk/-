@@ -151,6 +151,8 @@ export default function ProductCard({
           key={activeImg}
           src={activeImg}
           alt={product.name[language]}
+          loading="lazy"
+          decoding="async"
           initial={{ opacity: 0.85, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}

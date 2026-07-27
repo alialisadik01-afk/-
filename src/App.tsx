@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import SplashScreen from './components/SplashScreen';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductCard from './components/ProductCard';
@@ -18,6 +19,9 @@ import { auth, getFirestoreProducts, saveFirestoreProduct } from './lib/firebase
 import { onAuthStateChanged } from 'firebase/auth';
 
 export default function App() {
+  // Splash Screen State
+  const [showSplash, setShowSplash] = useState<boolean>(true);
+
   // Localization state
   const [language, setLanguage] = useState<Language>('ar');
   const isRtl = language === 'ar';
@@ -278,6 +282,17 @@ export default function App() {
     <div className={`min-h-screen bg-white text-gray-900 transition-all duration-300 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900 ${
       isRtl ? 'font-display' : ''
     }`}>
+      {/* Branded Launch Splash Screen */}
+      <AnimatePresence>
+        {showSplash && (
+          <SplashScreen
+            language={language}
+            duration={1800}
+            onFinish={() => setShowSplash(false)}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Header Bar */}
       <Header
         language={language}

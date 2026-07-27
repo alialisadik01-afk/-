@@ -230,6 +230,7 @@ export default function Hero({ language, onViewProducts, onBuyNow }: HeroProps) 
                       key={activeSlide}
                       src={slides[activeSlide].img}
                       alt={slides[activeSlide].alt}
+                      decoding="async"
                       initial={{ opacity: 0, scale: 1.05 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}

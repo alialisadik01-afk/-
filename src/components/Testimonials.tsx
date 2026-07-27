@@ -81,6 +81,8 @@ export default function Testimonials({ language }: TestimonialsProps) {
                     <img
                       src={review.avatar}
                       alt={review.name[language]}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-11 h-11 rounded-full object-cover shrink-0 shadow-sm border border-emerald-900/20"
                     />
