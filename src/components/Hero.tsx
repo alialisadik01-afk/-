@@ -308,7 +308,7 @@ export default function Hero({ language, onViewProducts, onBuyNow }: HeroProps) 
       </div>
 
       {/* Trust Badges Bar */}
-      <div id="why-us" className="scroll-mt-24 sm:scroll-mt-28 border-y border-white/60 bg-white/40 backdrop-blur-xl py-10 mt-10 shadow-[inset_0_1px_3px_rgba(255,255,255,0.7),0_10px_30px_-10px_rgba(16,185,129,0.03)] relative overflow-hidden">
+      <div id="why-us" className="scroll-mt-24 sm:scroll-mt-28 border-y border-emerald-100/80 bg-emerald-50/70 py-10 mt-10 shadow-xs relative overflow-hidden transform-gpu">
         {/* Subtle glowing reflection beneath glassmorphism panel */}
         <div className="absolute top-0 left-1/4 w-[50%] h-[1px] bg-gradient-to-r from-transparent via-emerald-400/30 to-transparent" />
         
@@ -318,13 +318,13 @@ export default function Hero({ language, onViewProducts, onBuyNow }: HeroProps) 
               const Icon = badge.icon;
               return (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ duration: 0.4, delay: idx * 0.08 }}
+                  whileHover={{ y: -4, scale: 1.01 }}
                   key={idx}
-                  className="flex flex-col items-center justify-center p-5 sm:p-6 bg-white/50 backdrop-blur-md border border-white/80 hover:border-emerald-200/50 hover:bg-white/70 rounded-2xl shadow-[0_4px_15px_-3px_rgba(0,0,0,0.01),0_10px_20px_-5px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_35px_-10px_rgba(16,185,129,0.06)] transition-all duration-300 cursor-pointer group"
+                  className="flex flex-col items-center justify-center p-5 sm:p-6 bg-white border border-emerald-100/80 hover:border-emerald-300 hover:bg-emerald-50/30 rounded-2xl shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer group transform-gpu"
                 >
                   <div className="w-12 h-12 rounded-full bg-emerald-50/75 border border-emerald-100/50 flex items-center justify-center mb-3 shadow-[inset_0_1px_2px_rgba(255,255,255,0.9)] group-hover:bg-emerald-500 group-hover:border-emerald-500 transition-all duration-300">
                     <Icon className="w-5 h-5 text-emerald-600 group-hover:text-white group-hover:scale-110 transition-all duration-300" />
@@ -386,9 +386,9 @@ export default function Hero({ language, onViewProducts, onBuyNow }: HeroProps) 
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ y: -6, scale: 1.02 }}
-                    className="relative group p-4 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-emerald-400/60 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between h-full min-h-[160px] shadow-lg min-w-0"
+                    transition={{ duration: 0.35, delay: index * 0.08 }}
+                    whileHover={{ y: -4, scale: 1.01 }}
+                    className="relative group p-4 sm:p-6 rounded-2xl bg-white/10 border border-white/15 hover:border-emerald-400/60 hover:bg-white/15 transition-all duration-300 flex flex-col justify-between h-full min-h-[160px] shadow-md min-w-0 transform-gpu"
                   >
                     <div className="flex items-center justify-between mb-3 sm:mb-4 gap-2">
                       <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-sm shrink-0">

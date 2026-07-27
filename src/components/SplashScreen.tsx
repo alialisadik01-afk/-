@@ -41,7 +41,7 @@ export default function SplashScreen({ language, onFinish, duration = 1800 }: Sp
       className="fixed inset-0 z-[99999] bg-[#FAFCFB] flex flex-col items-center justify-between py-12 select-none overflow-hidden"
     >
       {/* Soft Green Subtle Ambient Radial Background */}
-      <div className="absolute w-96 h-96 rounded-full bg-emerald-500/5 blur-3xl pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute w-96 h-96 rounded-full bg-emerald-500/5 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div />
 

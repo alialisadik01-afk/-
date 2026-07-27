@@ -358,8 +358,8 @@ export default function App() {
                       className="relative cursor-pointer overflow-hidden bg-gradient-to-br from-white via-white to-emerald-50/20 rounded-[20px] border border-emerald-100/40 p-8 sm:p-12 text-center shadow-[0_10px_35px_-10px_rgba(0,0,0,0.02)] hover:border-emerald-200/50 transition-all duration-300"
                     >
                       {/* Abstract subtle gradient background glows */}
-                      <div className="absolute -top-12 -left-12 w-56 h-56 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-                      <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+                      <div className="absolute -top-12 -left-12 w-56 h-56 bg-emerald-500/5 rounded-full pointer-events-none" />
+                      <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-emerald-500/5 rounded-full pointer-events-none" />
 
                       <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto space-y-6">
                         {/* Small Badge */}

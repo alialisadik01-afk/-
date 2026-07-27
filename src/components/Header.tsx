@@ -214,7 +214,7 @@ export default function Header({
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-xs transition-all duration-200 transform-gpu">
         {/* Top Ticker Notification Banner */}
         <div className="bg-gradient-to-r from-emerald-950 via-emerald-800 to-teal-900 text-white text-[11px] sm:text-xs py-2 border-b border-emerald-700/40 shadow-inner overflow-hidden select-none">
           {/* Mobile view: Continuous Marquee Animation */}
@@ -443,7 +443,7 @@ export default function Header({
       </header>
 
       {/* Sticky Mobile Bottom Navigation Bar */}
-      <div className="xl:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_16px_rgba(0,0,0,0.06)] pb-safe">
+      <div className="xl:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200/80 shadow-[0_-4px_16px_rgba(0,0,0,0.08)] pb-safe transform-gpu">
         <div className="max-w-md mx-auto grid grid-cols-5 h-16">
           {/* Home */}
           <button
@@ -562,7 +562,7 @@ export default function Header({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowGuestModal(false)}
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/60"
             />
 
             {/* Modal Box */}

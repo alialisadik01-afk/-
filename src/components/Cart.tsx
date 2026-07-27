@@ -198,7 +198,7 @@ export default function Cart({
       {/* Backdrop */}
       <div 
         onClick={onClose} 
-        className="absolute inset-0 bg-black/45 backdrop-blur-sm transition-opacity" 
+        className="absolute inset-0 bg-black/55 transition-opacity" 
       />
 
       {/* Cart Panel Frame */}
