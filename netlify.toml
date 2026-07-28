@@ -2,10 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+# Automatic 301 Redirect from Netlify to primary Firebase Hosting site
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "https://gen-lang-client-0124862842.web.app/:splat"
+  status = 301
+  force = true
 
 # Cache static assets for better performance
 [[headers]]

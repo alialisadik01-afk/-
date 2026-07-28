@@ -30,7 +30,18 @@
     <!-- Premium Fonts: Inter, Space Grotesk for French; Cairo, Tajawal for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Automatic Redirect from Netlify to Firebase Hosting -->
+    <script>
+      (function() {
+        if (window.location.hostname.endsWith('netlify.app')) {
+          var targetHost = 'gen-lang-client-0124862842.web.app';
+          var targetUrl = 'https://' + targetHost + window.location.pathname + window.location.search + window.location.hash;
+          window.location.replace(targetUrl);
+        }
+      })();
+    </script>
   </head>
   <body class="bg-white text-slate-900 min-h-screen">
     <div id="root"></div>
