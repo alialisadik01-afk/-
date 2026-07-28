@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ShoppingBag, Heart, User, Menu, X, Globe, Leaf, Home, Lock, Check, Mail, Eye, EyeOff, MessageCircle } from 'lucide-react';
+import { ShoppingBag, Heart, User, Menu, X, Globe, Leaf, Home, Lock, Check, Mail, Eye, EyeOff, MessageCircle, BadgeCheck } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data';
 import { auth, googleProvider, saveUserProfile } from '../lib/firebase';
@@ -270,8 +270,9 @@ export default function Header({
               <div className="w-[34.1875px] h-[35px] ml-[1px] mr-[-4px] mt-0 mb-0 pr-0 text-[13px] rounded-full bg-emerald-50 flex items-center justify-center border border-emerald-100 group-hover:bg-emerald-100 transition-colors duration-300">
                 <Leaf className="w-4 h-4 text-emerald-600" />
               </div>
-              <span className="text-[16px] ml-[0px] mr-[9px] font-bold tracking-tight text-gray-900 font-display">
+              <span className="text-[16px] ml-[0px] mr-[9px] font-bold tracking-tight text-gray-900 font-display flex items-center gap-1">
                 Herbs <span className="text-emerald-600 font-medium">77</span>
+                <BadgeCheck className="w-4 h-4 text-emerald-600 fill-emerald-100/80 inline-block" title={language === 'fr' ? 'Marque Officielle Vérifiée' : 'علامة تجارية توثيقية موثوقة'} />
               </span>
             </div>
 
